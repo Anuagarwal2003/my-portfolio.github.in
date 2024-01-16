@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Sketch in Dreams</title>
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.jpg">
+    <style>
+        .contain {
+            position: relative;
+            width: 50vw;
+            height: 80vh;
+            display: grid;
+            grid-template-rows: 1fr auto 1fr;
+            grid-template-columns: 1fr auto 1fr;
+        }
+
+        .layer {
+            position: absolute;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            background-color: aliceblue;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .top-layer {
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+        }
+
+        .bottom-layer {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+        }
+
+        .right-layer {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 10%;
+        }
+
+        .left-layer {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top"
+    style=" background-image: url('images/background-image.png'); background-position: center; background-attachment: fixed;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container mb-1">
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a>
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll mx-3" href="#header">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll mx-3" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll mx-3" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mx-3" href="#" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Projects</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="My-App.html">My-Apps</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="My-Website.html">My-Website</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="graphic.html">Posters and Reels
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll"
+                                    href="Advantages_of_working_with_me.html">Advantages of Working With Me</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll mx-3" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons ">
+                    <span class="fa-stack mx-3">
+                        <a href="https://www.facebook.com/profile.php?id=100070636037255&mibextid=ZbWKwL">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack mx-3">
+                        <a href="https://instagram.com/artdoddles2022?igshid=MTNiYzNiMzkwZA==">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 header-first-column">
+                    <h2 style="color: white;"
+                        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-bottom: 20px;"> Hii, I  am Anushka Agarwal</h2>
+                    <h1 class="h1-large our-service"
+                        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-bottom: 20px;">
+                        Welcome to our page....</h1>
+                    <h1 style="color: red;">"Sketch in Dreams"</h1>
+                </div>
+                    <div class="content col-sm-6" style="margin-top: -10%;">
+                        <img src="images/jump-hello-unscreen.gif" alt="head" height="100%" width="100%" />
+                    </div>
+              
+            </div>
+        </div>
+        
+        <div style="margin-left: 9.5%;">
+            <a class="btn-solid-lg page-scroll" href="#about">About</a>
+            <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
+        </div>
+ 
+        </div> <!-- end of text-container -->
+        </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- About-->
+    <div id="about" class="basic-1">
+        <div class="container">
+            <div class="row mb-4 text-center">
+                <h2 class="h2-heading our-service" style="font-family:Georgia, 'Times New Roman', Times, serif;">ABOUT
+                </h2>
+
+            </div> <!-- end of col -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container first card px-3 py-2">
+                        <h5 style="font-family:Georgia, 'Times New Roman', Times, serif;">Hi there I'm Anushka Agarwal,
+                        </h5>
+                        <p style="font-family:'Times New Roman', Times, serif">I am a practical knowledge seeker. To
+                            work in an
+                            environment where my skills and knowledge reflects the growth of the company and enhance my
+                            knowledge as well
+                            as experience. Web development is a place where we can practically change the world with new
+                            possibilities. To make it possible
+                            some skills I learnt like HTML, CSS, Bootstrap, React.js, React-native,etc
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container second card px-4 pb-5 pt-4">
+                        <div class="time">2023(Dec) - PRESENT</div>
+                        <h6>Web Developer + SMM</h6>
+
+                        <p style="font-family:'Times New Roman', Times, serif">Currently I am working as a intern in
+                            <span style="text-underline-position: below;"> DfreeNovelish</span>
+                        </p>
+                        <div class="time">2023(Aug)-2023(Dec)</div>
+                        <h6>Web Developer + App Developer</h6>
+                        <p style="font-family:'Times New Roman', Times, serif">I have also worked as an intern in
+                            RRinfoSoft</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container third card  px-4 pb-5 pt-4">
+                        <div class="time">2022(Nov)-2023(Apr)</div>
+                        <h6>Graphic Designer</h6>
+                        <p style="font-family:'Times New Roman', Times, serif; padding-bottom: 120px;">I worked at Adore
+                            International where I played the role of a Graphic Designer
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of about -->
+
+
+
+
+    <!-- Services -->
+    <div id="services" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h2 class="h2-heading our-service" style="font-family:Georgia, 'Times New Roman', Times, serif;">OUR
+                        SERVICES</h2>
+                    <h5 class="our-service mt-5">--> Our servies as a Web designer</h5>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6 class="mx-3">Website Development with Responsive Design:</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Create static websites for small businesses or personal portfolios.
+                            </li>
+                            <li>Ensure that websites are optimized for various devices, providing a seamless user
+                                experience on desktops, tablets, and mobile devices.</li>
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6>E-commerce & Portfolio Development:</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Build simple e-commerce websites for small businesses.</li>
+                            <li>Create online portfolios for individuals, artists, or professionals looking to showcase
+                                their work.</li>
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6>Website Maintenance:</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Offer services for maintaining and updating websites, ensuring they remain secure,
+                                up-to-date, and functional.</li>
+
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <!-- 
+            <div class="col-lg-3">
+                <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                   <h6>Graphic Designing</h6>
+                   <p>In the graphic designing era we give different type of services like:</p>
+                   <ul style="font-family:'Times New Roman', Times, serif">
+                <li>Logo designing</li>
+                <li>Design graphics for various social media platforms</li>
+                <li>Designing different type of videos for different platforms</li> -->
+
+
+
+                <div class="row">
+                    <h5 class="our-service mt-5">--> Our services as a Graphic Designer</h5>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6>Social Media Graphics & Motion Graphics:</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Design graphics for various social media platforms,
+                                including profile images, cover photos, and posts to maintain a consistent brand image.
+                            </li>
+                            <li>Create animated graphics and videos for
+                                various purposes, such as promotional videos, explainer videos, or animated logos.</li>
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6 class="mx-3"> We provide different type of Logo Design</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Wordmark </li>
+                            <li>Lettermark </li>
+                            <li>Pictorial Mark</li>
+                            <li>Abstract Mark</li>
+                            <li>Responsive Logo</li>
+                            <li>Combination Mark</li>
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+
+                <div class="col-lg-4">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                        <h6>Print Design:</h6>
+                        <ul style="font-family:'Times New Roman', Times, serif">
+                            <li>Design printed materials such as business cards, brochures, flyers, posters, banners,
+                                and packaging.</li>
+
+                        </ul>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div>
+            <!-- 
+                <div class="col-lg-3">
+                    <div class="text-box box bg-light" style="  transform: rotateZ(5deg);">
+                       <h6>Graphic Designing</h6>
+                       <p>In the graphic designing era we give different type of services like:</p>
+                       <ul style="font-family:'Times New Roman', Times, serif">
+                    <li>Logo designing</li>
+                    <li>Design graphics for various social media platforms</li>
+                    <li>Designing different type of videos for different platforms</li> -->
+
+
+
+
+
+ <!-- Details -->
+ <div class="split">
+    <div class="area-1">
+    </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
+        <div class="container-fluid">    
+            <div class="row">
+                <div class="col-lg-12">     
+                    
+                    <!-- Text Container -->
+                    <div class="text-container mx-5">
+                        <h2 style="font-family:Georgia, 'Times New Roman', Times, serif;">Why Work With Me</h2>
+                        <p>I am a quick learner and adaptable, qualities that I believe are crucial in the
+                            ever-evolving field of web development.</p>
+                        <h5 style="font-family:Georgia, 'Times New Roman', Times, serif;">DESIGN TOOLS</h5>
+                        <p>My favorite design tools are Photoshop and Illustrator but I can create designs in
+                            Canva, Visual-Studio</p>
+                        <h5 style="font-family:Georgia, 'Times New Roman', Times, serif;">DEVELOPMENT SKILLS
+                        </h5>
+                        <p>I am familiar and work on a daily basis with HTML, CSS, JavaScript, Bootstrap,
+                            Visual-Studio, React.js, React-Native </p>
+
+                        <div class="icons-container">
+                            <img src="images/details-icon-photoshop.png" alt="alternative">
+                            <img src="images/details-icon-illustrator.png" alt="alternative">
+                            <img src="images/details-icon-html.png" alt="alternative">
+                            <img src="images/details-icon-css.png" alt="alternative">
+                            <img src="images/details-icon-bootstrap.png" alt="alternative">
+                            <img src="images/details-icon-javascript.png" alt="alternative">
+                        </div> <!-- end of icons-container -->
+                    </div> <!-- end of text-container -->
+                    <!-- end of text container -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of area-2 -->
+</div> <!-- end of split -->
+<!-- end of details -->
+
+
+
+            <!-- Projects -->
+            <div id="projects" class="basic-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="h2-heading our-service"
+                                style="font-family:Georgia, 'Times New Roman', Times, serif;">Delivered projects</h2>
+                            <p style="font-family:'Times New Roman', Times, serif" class="p-heading text-light">Listed
+                                below are some of
+                                the most representative projects I've worked on. They range from basic web design for
+                                presentation sites to advanced web development for online shops</p>
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-container">
+                                <div class="image-container">
+                                    <a href="My-Website.html">
+                                        <img class="img-fluid" src="images/project-1.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p class="text-light"><strong> Project Intro: </strong>This one is a website template
+                                    which I make for my collage porject <a class="blue"
+                                        href="My-Website.html">details</a></p>
+
+                            </div> <!-- end of text-container -->
+                            <div class="text-container">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/project-2.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p class="text-light"><strong>Project Intro: </strong>In this we create,read, delete and
+                                    update
+                                    any informational data in your database <a class="blue"
+                                        href="My-App.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                            <div class="text-container">
+                                <div class="image-container">
+                                    <a href="My-Website.html">
+                                        <img class="img-fluid" src="images/project-3.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p class="text-light"><strong> Project Intro:</strong>This one is just a website
+                                    template which shows the
+                                    formate of any website <a class="blue" href="My-Website.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                            <div class="text-container">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/project-4.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p class="text-light"><strong>Project Intro:</strong>In this I make a short quiz which
+                                    ask with you some
+                                    questions and then give your score according to your correct answers <a class="blue"
+                                        href="My-App.html">details</a></p>
+                                </p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </div> <!-- end of basic-3 -->
+            <!-- end of projects -->
+
+
+            <!-- Works -->
+            <div class="basic-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="text-container px-2 py-2 card our-card">
+                                <div class="image-container">
+                                    <a href="My-Website.html">
+                                        <img class="img-fluid" src="images/project-1.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Project Intro: </strong>This one is a website template which I make for
+                                    my collage porject <a class="blue" href="My-Website.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <div class="text-container card px-2 py-2 our-card">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/project-2.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Project Intro: </strong>In this we create,read, delete and update
+                                    any informational data in your database <a class="blue"
+                                        href="My-App.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card px-2 py-2">
+                                <div class="image-container">
+                                    <a href="My-Website.html">
+                                        <img class="img-fluid" src="images/project-3.png" alt="alternative"
+                                            style="margin-bottom: 60px;">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Project Intro:</strong>This one is just a website template which shows
+                                    the
+                                    formate of any website <a class="blue" href="My-Website.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card px-2 py-2">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/project-4.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Project Intro:</strong>In this I make a short quiz which ask with you
+                                    some
+                                    questions and then give your score according to your correct answers <a class="blue"
+                                        href="My-App.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card px-2 py-2">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/work-5.png" alt="alternative"
+                                            style="margin-bottom: 64px;">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Porject Intro:</strong>This one is a To-Do-List app which
+                                    should add or delete any list of work which you add in the list just like notepad <a
+                                        class="blue" href="My-App.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card px-2 py-1">
+                                <div class="image-container">
+                                    <a href="My-App.html">
+                                        <img class="img-fluid" src="images/work-6.png" alt="alternative">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                                <p><strong>Short Project Intro: </strong>In this I make a crud using HTML,
+                                    CSS React.js and mongodb, this project is given by RRinfoSoft <a class="blue"
+                                        href="My-App.html">details</a></p>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+
+                    <h2 class="text-light text-center my-5">Posters</h2>
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card">
+                                <div class="image-container">
+                                    <a href="graphic.html">
+                                        <img class="img-fluid" src="images/poster-5.jpg" alt="poster-1">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+
+                        <div class="col-lg-4 py-5">
+                            <div class="text-containercard our-card">
+                                <div class="image-container">
+                                    <a href="graphic.html">
+                                        <img class="img-fluid" src="images/poster-2.jpg" alt="poster-1">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+
+
+                        <div class="col-lg-4">
+                            <div class="text-container card our-card">
+                                <div class="image-container">
+                                    <a href="graphic.html">
+                                        <img class="img-fluid" src="images/poster-1.jpg" alt="poster-1">
+                                    </a>
+                                </div> <!-- end of image-container -->
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    </div>
+
+
+
+
+                </div> <!-- end of container -->
+            </div> <!-- end of basic-4 -->
+            <!-- end of works -->
+
+
+
+
+
+
+
+            <!-- Testimonials -->
+            <div class="cards-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="h2-heading our-service"
+                                style="font-family:Georgia, 'Times New Roman', Times, serif;">A few words from people
+                                that chose to work with me</h2>
+                        </div> <!-- end of col -->
+                    </div> <!-- end of row -->
+                    <div class="row">
+
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body px-4 py-4">
+                                <p class="testimonial-text">“Mark is a skilled developer which will do everything
+                                    possible
+                                    to deliver the project on time and I really appreciate that”</p>
+                                <div class="details">
+                                    <img src="images/testimonial-1.jpg" alt="alternative">
+                                    <div class="text">
+                                        <div class="testimonial-author">Samantha Bloom</div>
+                                        <div class="occupation">Team Leader - Syncnow</div>
+                                    </div> <!-- end of text -->
+                                </div> <!-- end of testimonial-details -->
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body px-4 py-4">
+                                <p class="testimonial-text">“Loved to work with Mark he's such an awesome developer with
+                                    great attention to details. He also has a great eye for design”</p>
+                                <div class="details">
+                                    <img src="images/testimonial-2.jpg" alt="alternative">
+                                    <div class="text">
+                                        <div class="testimonial-author">John Rowling</div>
+                                        <div class="occupation">Marketing Manager - Nexlite</div>
+                                    </div> <!-- end of text -->
+                                </div> <!-- end of testimonial-details -->
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-body px-4 py-2">
+                                <p class="testimonial-text">“So glad we started working with Mark. We've used many times
+                                    his
+                                    design and development skills for our inhouse online projects”</p>
+                                <div class="details">
+                                    <img src="images/testimonial-3.jpg" alt="alternative">
+                                    <div class="text">
+                                        <div class="testimonial-author">Lana Smith</div>
+                                        <div class="occupation">General Manager - Shifter</div>
+                                    </div> <!-- end of text -->
+                                </div> <!-- end of testimonial-details -->
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-1 -->
+        <!-- end of testimonials -->
+
+
+        <!-- Section Divider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <hr class="section-divider">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <!-- end of section divider -->
+
+
+        <!-- Questions -->
+        <div class="accordion-1">
+            <div class="container">
+                <div class="row">
+
+                    <h2 class="h2-heading our-service " style="font-family:Georgia, 'Times New Roman', Times, serif;;">
+                        Frequent questions</h2>
+
+                </div> <!-- end of row -->
+                <div class="row pt-5 "
+                    style="border:solid; border-color: red;padding-bottom: -50px; background-color: white;">
+                    <div class="col-sm-4 ">
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link btn-block text-left" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        What is your design process for creating a website?
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        My design process involves initial client consultations to understand their
+                                        vision,
+                                        wireframing and prototyping, followed by design iterations based on feedback,
+                                        and final
+                                        implementation using industry-standard coding practices.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        How do you ensure that a website is user-friendly and accessible?
+                                    </button>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        I prioritize user experience (UX) by conducting usability testing, adhering to
+                                        accessibility
+                                        standards (WCAG), and implementing responsive design to ensure a seamless
+                                        experience across devices.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        What inspires your design work?
+                                    </button>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        I find inspiration in diverse sources, including nature, current design trends,
+                                        and cultural influences. Staying curious and observant allows me to bring fresh
+                                        and innovative ideas to each project.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        How do you stay updated on current design trends and technologies?
+                                    </button>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        I stay current through continuous learning, attending design conferences,
+                                        and participating in online communities. This helps me integrate the latest
+                                        trends and technologies into my work.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        Can you walk through your design process for a typical project?
+                                    </button>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        My process involves research, conceptualization, sketching, digital design,
+                                        client feedback, and iterative revisions. This ensures the final product aligns
+                                        with the client's vision.
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end of accordion -->
+
+                    </div> <!-- end of col -->
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <img src="./images/fiq.jpeg" height="70%" width="80%" />
+                    </div>
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of accordion-1 -->
+        <!-- end of questions -->
+
+
+        <!-- Contact -->
+        <div id="contact" class="form-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 style="font-family:Georgia, 'Times New Roman', Times, serif;">Contact details</h2>
+                        <p class="p-heading">For any type of query please don't hesitate to get in touch with me.
+                            The fastest way is to send me your message using the following email <a class="blue no-line"
+                                href="#your-link">agarwal30.07.20.03@gmail.com</a></p>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="visme_d" id="contactForm" name="google-sheet" data-title="Business Contact Form"
+                            data-url="ep3ygpvy-business-contact-form?fullPage=true" data-domain="forms"
+                            data-full-page="true" data-min-height="100vh" data-form-id="11729"></div>
+
+
+                        <!-- Contact Form -->
+                        <form method="POST" id="contactForm" name="google-sheet">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="cname" name="Name"
+                                    placeholder="Enter username" required>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="cemail" name="Email"
+                                    placeholder="Enter email" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control-textarea" id="cmessage" name="Message"
+                                    required></textarea>
+                                <label class="label-control" for="cmessage">Project details</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control-submit-button" name="Submit">
+                            </div>
+                        </form>
+
+
+
+
+                        <!-- end of contact form -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of form-1 -->
+        <!-- end of contact -->
+
+
+        <!-- Footer -->
+        <!-- <div class="footer bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="social-container">
+                            <span class="fa-stack">
+                                <a href="https://www.facebook.com/profile.php?id=100070636037255&mibextid=ZbWKwL">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+
+                            <span class="fa-stack">
+                                <a href="https://instagram.com/artdoddles2022?igshid=MTNiYzNiMzkwZA==">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x"></i>
+                                </a>
+                            </span> -->
+
+                        </div> <!-- end of social-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
+
+
+   
+
+    <!-- Footer -->
+    <div class="footer bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social-container">
+                        <span class="fa-stack">
+                            <a href="https://www.facebook.com/profile.php?id=100070636037255&mibextid=ZbWKwL">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://instagram.com/artdoddles2022?igshid=MTNiYzNiMzkwZA==">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                       
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+
+           <!-- Copyright -->
+    <div class="copyright bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">Anushka Agarwal</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+        
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+
+
+            <!-- Scripts -->
+            <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+            <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+            <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+            <script src="js/scripts.js"></script> <!-- Custom scripts -->
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwW9e2vP5w_uctYJ04oGF_iyTVWtIrPR69-71OqMGfE5t6YkUthMf_G_Ic3yE-cWh1z/exec'
+                const form = document.forms['google-sheet']
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+</body>
+
+</html>
